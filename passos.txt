@@ -1,0 +1,34 @@
+docker run --rm -it -v ${PWD}:/app -w /app node:24 npx @angular/cli@21 new frontend --skip-git
+
+new Dockerfile in frontend folder:
+
+` FROM node:24
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 4200
+CMD ["npx", "ng", "serve", "--host", "0.0.0.0"] `
+
+new docker-compose.yml in root folder:
+
+` services:
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "4200:4200" `
+
+new .dockerignore in root folder:
+
+` node_modules
+dist
+.git
+.gitignore
+Dockerfile `
+
