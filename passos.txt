@@ -12,18 +12,24 @@ RUN npm install
 COPY . .
 
 EXPOSE 4200
-CMD ["npx", "ng", "serve", "--host", "0.0.0.0"] `
+
+CMD ["npm", "start"] `
 
 3- new docker-compose.yml in root folder:
 
 ` services:
   frontend:
     build: ./frontend
-    volumes:
-      - ./frontend:/app
+    command: npm start
     ports:
       - "4200:4200"
-    command: npm start `
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend
+          target: /app
+          ignore:
+            - node_modules/ `
 
 4- new .dockerignore in root folder:
 
@@ -33,7 +39,7 @@ dist
 .gitignore
 Dockerfile `
 
-5- docker compose up
+5- docker compose up --build --watch
 
 6- git init
 
@@ -43,7 +49,7 @@ Dockerfile `
 
 9- git branch -M main
 
-10- git remote add origin git@github.com:gllbob/Portifolio.git
+10- git remote add origin git@github.com:gllbob/Portfolio.git
 
 11- git push -u origin main
 
