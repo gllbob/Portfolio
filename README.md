@@ -11,8 +11,8 @@ Este projeto é o meu portfólio pessoal, desenvolvido para apresentar meus proj
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Frontend:** Angular 17+ (Standalone Components)
-* **Estilização:** CSS3 Moderno (Responsivo)
+* **Frontend:** Angular 21 (Standalone Components)
+* **Estilização:** Tailwind CSS (Responsivo)
 * **Formulário:** Integração com Formspree
 * **Segurança:** Google reCAPTCHA V2
 * **Backend (Serverless):** Node.js via Vercel Serverless Functions (para validação segura do Captcha)
