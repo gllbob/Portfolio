@@ -1,1 +1,49 @@
-<p>teste2</p>
+<app-header></app-header>
+
+<main class="bg-slate-950 pt-20">
+
+  <section class="container mx-auto px-6 py-24 flex flex-col-reverse md:flex-row items-center gap-12">
+
+    <div class="flex-1 text-center md:text-left">
+      <p class="text-blue-500 font-mono mb-4">Olá Mundo, meu nome é</p>
+
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+        Gabriel Lopes Lima.
+      </h1>
+
+      <h2 class="text-3xl text-gray-400 mb-8">
+        Transformo necessidades em tecnologia.
+      </h2>
+
+      <p class="text-gray-400 text-lg max-w-xl mx-auto md:mx-0 mb-10">
+        Desenvolvedor Full Stack baseado em Salvador, BA. Criando sistemas robustos e interfaces intuitivas para impulsionar negócios.
+      </p>
+
+      <div class="flex gap-4 justify-center md:justify-start">
+        <a href="#projetos" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition">
+          Ver Projetos
+        </a>
+        <a routerLink="/sobre" class="px-8 py-3 border border-blue-500 text-blue-500 hover:bg-blue-500/10 rounded-lg font-semibold transition">
+          Conheça minha jornada
+        </a>
+      </div>
+      
+       <div class="mt-10 flex gap-6 justify-center md:justify-start text-gray-400">
+         <a href="mailto:gllbob@hotmail.com" class="hover:text-blue-500 transition"><img src="img/email-logo.png" class="w-6 h-6" alt="Email Icon"></a>
+         <a href="https://www.linkedin.com/in/gabriel-lopes-l/" class="hover:text-blue-500 transition"><img src="img/linkedin.png" class="w-6 h-6" alt="LinkedIn Icon"></a>
+         <a href="https://github.com/gllbob" class="hover:text-blue-500 transition"><img class="w-6 h-6" src="img/github-mark-white.png" alt="GitHub Icon"></a>
+         <a href="https://wa.me/5571992908163" class="hover:text-blue-500 transition"><img class="w-6 h-6" src="img/wpp.png" alt="Whatsapp Icon"></a>
+       </div>
+    </div>
+
+    <div class="flex-1 flex justify-center relative">
+        <div class="absolute inset-0 bg-blue-500 blur-[100px] opacity-20 rounded-full"></div>
+        
+        <img src="img/logo.png" alt="Gabriel Lopes Lima" 
+             class="relative z-10 rounded-full border-2 border-slate-800 w-80 h-80 object-cover shadow-2xl transform hover:-translate-y-2 transition duration-300">
+    </div>
+  </section>
+
+</main>
+
+<app-footer></app-footer>

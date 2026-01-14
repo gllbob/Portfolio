@@ -1,0 +1,171 @@
+<app-header></app-header>
+
+<main class="bg-slate-950 pt-20 min-h-screen text-gray-300">
+
+  <section class="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-16">
+    
+    <div class="flex-1 space-y-8 animate-fade-in-up">
+      <div class="border-l-4 border-blue-500 pl-6">
+        <h1 class="text-4xl md:text-5xl font-bold text-white">Sobre Mim</h1>
+        <p class="text-blue-500 font-mono mt-2 text-lg">Engineer & Project Leader</p>
+      </div>
+
+      <div class="text-lg leading-relaxed space-y-6 text-gray-400">
+        <p>
+        Minha jornada no desenvolvimento começou há seis anos com uma premissa simples: 
+        <span class="text-white font-medium">código é apenas o meio; a solução é o fim.</span> 
+        Mais do que escrever linhas de comando, especializei-me em arquitetar ecossistemas digitais que resolvem problemas reais.
+        </p>
+
+        <p>
+        Construí minha base técnica atuando em frentes diversificadas: do desenvolvimento de sistemas com 
+        <span class="text-blue-400 font-medium">PHP e MySQL</span> na <em>Mitikas</em>, 
+        até a arquitetura de aplicações globais com <span class="text-blue-400 font-medium">React e AWS</span> na <em>Top Serviços</em>.
+        </p>
+
+        <p>
+        Expandi meu escopo para a <span class="text-white font-medium">Liderança Técnica</span> na 
+        <em>Bárbara Monteiro Arquitetura</em>. Liderei o desenvolvimento de uma solução móvel nativa utilizando 
+        <span class="text-blue-400 font-medium">Java e APIs RESTful</span>, entrega que resultou em uma redução de 
+        <span class="text-green-400 font-bold">30% no tempo de resposta</span> ao cliente.
+        </p>
+
+        <p>
+        Hoje, concilio essa vivência de mercado com o rigor acadêmico do Bacharelado em 
+        <span class="text-white font-medium">Ciência e Tecnologia na UFBA</span>. 
+        Busco desafios que unam engenharia de software avançada, volumes de dados e gestão técnica.
+        </p>
+      </div>
+
+      <div class="pt-6 flex flex-wrap gap-4">
+  
+        <a routerLink="/contato" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-lg transition duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1">
+            <span>Entrar em Contato</span>
+        </a>
+
+        <a href="assets/Curriculo_Gabriel_PT.pdf" target="_blank" class="inline-flex items-center gap-2 text-gray-300 border border-slate-700 hover:border-blue-500 hover:text-white hover:bg-slate-800 px-6 py-3 rounded-lg transition duration-300">
+            <span>Baixar CV Completo</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="flex-1 flex justify-center relative">
+      <div class="absolute inset-0 bg-blue-600 blur-[80px] opacity-20 rounded-full"></div>
+      
+      <img src="img/logo.png" 
+           alt="Gabriel Lopes Lima" 
+           class="relative z-10 w-80 h-80 md:w-96 md:h-96 object-cover rounded-full border-2 border-slate-800 shadow-2xl rotate-3 hover:rotate-0 transition duration-500 grayscale hover:grayscale-0">
+    </div>
+
+  </section>
+
+  <section class="bg-slate-900/50 py-20 border-t border-slate-800">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold text-white mb-16">
+        <span class="text-blue-500 font-mono text-xl block mb-2">Tech Stack</span>
+        Ferramentas que domino
+      </h3>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 gap-y-12 items-center justify-items-center">
+        
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/html5.png" alt="HTML5" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">HTML5</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/css3.png" alt="CSS3" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">CSS3</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/js.png" alt="JavaScript" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">JavaScript</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/ts-logo.png" alt="TypeScript" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">TypeScript</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/icon_angular.png" alt="Angular" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">Angular</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/Java.png" alt="Java" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">Java</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/python-logo-only.png" alt="Python" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">Python</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/React.png" alt="React" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">React</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/PHP.png" alt="PHP" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">PHP</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/C++-icon.png" alt="C++" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">C++</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/mysql.png" alt="MySQL" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">MySQL</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/PostgreSQL.png" alt="PostgreSQL" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">PostgreSQL</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/MongoDB_Logomark.png" alt="MongoDB" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">MongoDB</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/Git-Icon.png" alt="Git" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">Git</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/github-mark-white.png" alt="GitHub" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">GitHub</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/docker-mark-blue.png" alt="Docker" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">Docker</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/bootstrap-logo.png" alt="Bootstrap" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">Bootstrap</span>
+        </div>
+
+        <div class="flex flex-col items-center group cursor-default">
+            <img src="/img/Tailwind CSS.png" alt="Tailwind CSS" class="w-16 mb-4 grayscale group-hover:grayscale-0 group-hover:-translate-y-2 transition duration-300">
+            <span class="text-gray-500 group-hover:text-blue-400 font-medium transition">Tailwind CSS</span>
+        </div>
+
+        </div>
+    </div>
+  </section>
+
+</main>
+
+<app-footer></app-footer>
