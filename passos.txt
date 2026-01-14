@@ -1,6 +1,6 @@
-docker run --rm -it -v ${PWD}:/app -w /app node:24 npx @angular/cli@21 new frontend --skip-git
+1- docker run --rm -it -v ${PWD}:/app -w /app node:24 npx @angular/cli@21 new frontend --skip-git
 
-new Dockerfile in frontend folder:
+2- new Dockerfile in frontend folder:
 
 ` FROM node:24
 
@@ -14,7 +14,7 @@ COPY . .
 EXPOSE 4200
 CMD ["npx", "ng", "serve", "--host", "0.0.0.0"] `
 
-new docker-compose.yml in root folder:
+3- new docker-compose.yml in root folder:
 
 ` services:
   frontend:
@@ -22,13 +22,28 @@ new docker-compose.yml in root folder:
     volumes:
       - ./frontend:/app
     ports:
-      - "4200:4200" `
+      - "4200:4200"
+    command: npm start `
 
-new .dockerignore in root folder:
+4- new .dockerignore in root folder:
 
 ` node_modules
 dist
 .git
 .gitignore
 Dockerfile `
+
+5- docker compose up
+
+6- git init
+
+7- git add .
+
+8- git commit -m "Arquivos Iniciais do Projeto Portifolio"
+
+9- git branch -M main
+
+10- git remote add origin git@github.com:gllbob/Portifolio.git
+
+11- git push -u origin main
 
