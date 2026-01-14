@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Home } from './view/home/home';
 import { Sobre } from './view/sobre/sobre';
 import { Contato } from './view/contato/contato';
+import { Projetos } from './view/projetos/projetos';
 
 export const routes: Routes = [
     {
@@ -15,6 +16,10 @@ export const routes: Routes = [
     {
         path: 'contato',
         component: Contato
+    },
+    {
+        path: 'projetos',
+        component: Projetos
     },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', redirectTo: '/home' }

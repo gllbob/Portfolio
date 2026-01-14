@@ -84,42 +84,50 @@
       </div>
 
       <div class="bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-2xl">
-        <form action="https://formspree.io/f/mlggeqgj" method="POST" class="space-y-6">
+        <form [formGroup]="contatoForm" (ngSubmit)="enviar()" class="space-y-6">
             
             <div class="grid grid-cols-2 gap-6">
                 <div class="col-span-2 md:col-span-1">
-                <label class="block text-sm font-medium text-gray-400 mb-2">Seu Nome</label>
-                <input type="text" name="name" required class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition" placeholder="João Silva">
+                  <label class="block text-sm font-medium text-gray-400 mb-2">Seu Nome</label>
+                  <input type="text" formControlName="name" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition" placeholder="João Silva">
                 </div>
 
                 <div class="col-span-2 md:col-span-1">
-                <label class="block text-sm font-medium text-gray-400 mb-2">Seu Email</label>
-                <input type="email" name="email" required class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition" placeholder="joao@empresa.com">
+                  <label class="block text-sm font-medium text-gray-400 mb-2">Seu Email</label>
+                  <input type="email" formControlName="email" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition" placeholder="joao@empresa.com">
                 </div>
             </div>
 
             <div>
                 <label class="block text-sm font-medium text-gray-400 mb-2">Assunto</label>
-                <select name="subject" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
-                <option value="Oportunidade">Oportunidade de Trabalho</option>
-                <option value="Freelance">Freelance / Consultoria</option>
-                <option value="Networking">Networking</option>
-                <option value="Outros">Outros</option>
+                <select formControlName="subject" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition">
+                  <option value="Oportunidade">Oportunidade de Trabalho</option>
+                  <option value="Freelance">Freelance / Consultoria</option>
+                  <option value="Networking">Networking</option>
+                  <option value="Outros">Outros</option>
                 </select>
             </div>
 
             <div>
                 <label class="block text-sm font-medium text-gray-400 mb-2">Mensagem</label>
-                <textarea name="message" rows="4" required class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition" placeholder="Olá Gabriel..."></textarea>
+                <textarea formControlName="message" rows="4" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition" placeholder="Olá Gabriel..."></textarea>
             </div>
 
-            <input type="hidden" name="_next" value="https://seusite.vercel.app/">
-            <input type="hidden" name="_subject" value="Novo contato do Portfólio!">
+            <div class="mb-4">
+               <ngx-recaptcha2
+                  [siteKey]="siteKey"
+                  (success)="handleSuccess($event)"
+                  formControlName="recaptcha">
+               </ngx-recaptcha2>
+            </div>
 
-            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition duration-300 flex items-center justify-center gap-2">
-                <span>Enviar Mensagem</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            <button type="submit" 
+               [disabled]="contatoForm.invalid || enviando"
+               class="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-slate-700 disabled:cursor-not-allowed text-white font-bold py-4 rounded-lg transition duration-300 flex items-center justify-center gap-2">
+                <span *ngIf="!enviando">Enviar Mensagem</span>
+                <span *ngIf="enviando">Enviando...</span>
+                <svg *ngIf="!enviando" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
             </button>
 
