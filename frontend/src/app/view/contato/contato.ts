@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Contato {
   contatoForm: FormGroup;
-  siteKey: string = "6LfOGEosAAAAADpRFfJ2eADHByZowPw8vhAR77LR"; // Sua chave pública
+  siteKey: string = "6LfOGEosAAAAADpRFfJ2eADHByZowPw8vhAR77LR";
   enviando: boolean = false;
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
