@@ -61,6 +61,14 @@ export class Contato {
   }
 
   handleSuccess(token: any) {
-    console.log("Captcha resolvido com sucesso.");
+    console.log("Captcha resolvido:", token);
+    
+    this.contatoForm.patchValue({
+      recaptcha: token
+    });
+    
+    this.contatoForm.get('recaptcha')?.updateValueAndValidity();
+    
+    console.log("Formulário Válido?", this.contatoForm.valid);
   }
 }
